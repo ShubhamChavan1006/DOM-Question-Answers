@@ -1,0 +1,44 @@
+<!-- Create a button that, when clicked, changes the background color of a <div> using style.backgroundColor. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Background Color</title>
+</head>
+<body>
+
+  <!-- Div to change background color -->
+  <div id="myDiv">
+    This is a div with a background color.
+  </div>
+  <br>
+   <!-- Button to trigger the color change -->
+   <button onclick="changeBackgroundColor()">Change Background Color</button>
+
+   <!--CSS======================================================================================= -->
+   <style>
+    #myDiv {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      width: 150px;
+      height: 50px;
+      background-color: rgb(4, 101, 123);
+      padding: 120px;
+      
+     
+    }
+   </style>
+  <!--=======JavaScript code==========================================================================-->
+  <script>
+    function changeBackgroundColor() {
+      // Getting the div element by ID
+      var div = document.getElementById('myDiv');
+      
+      // Changing the background color of the div
+      div.style.backgroundColor = "yellow";  // You can change this to any color you like
+    }
+  </script>
+</body>
+</html>

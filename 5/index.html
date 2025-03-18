@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Hidden Paragraph</title>
+</head>
+<body>
+    <p id="paragraph" >This is a paragraph that can be toggled on or off.</p>
+    <button id="toggleButton">Toggle Paragraph Visibility</button>
+
+<!--=========CSS======================================================================================================-->
+    <style>
+        #paragraph {
+            
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #c10517;
+            background-color: #96c207;
+        }
+    </style>
+<!--====================Script code =============================================================================== -->
+    <script>
+        // Select the button and paragraph
+        const toggleButton = document.getElementById('toggleButton');
+        const paragraph = document.getElementById('paragraph' );
+
+        // Add an event listener to toggle the hidden attribute
+        toggleButton.addEventListener('click', () => {
+            // Check if the paragraph is currently hidden
+            if (paragraph.hasAttribute('hidden')) {
+                // Remove the hidden attribute
+                paragraph.removeAttribute('hidden');
+            } else {
+                // Add the hidden attribute
+                paragraph.setAttribute('hidden', '');
+            }
+        });
+    </script>
+</body>
+</html>
